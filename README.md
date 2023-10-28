@@ -1,8 +1,12 @@
 # Lab5Web
 Penjelasan serta urutan praktikum 5 (Lab5Web).
 
+--------------------------------------
+
 ### Pertanyaan dan Tugas  
-> 1. Buat script untuk melakukan validasi pada isian form.
+Buat script untuk melakukan validasi pada isian form.
+
+--------------------------------------
 
 ### 1. Membuat judul dan header
 ```HTML
@@ -89,12 +93,12 @@ Penjelasan serta urutan praktikum 5 (Lab5Web).
 >  Skrip kode ini digunakan untuk melakukan validasi data yang dimasukkan oleh pengguna melalui formulir pada halaman web. Validasi ini digunakan untuk memastikan bahwa data yang masuk sesuai dengan kriteria tertentu sebelum data tersebut dikirimkan.
 
 ### Penjelasan
-> - ``` validateForm() ``` adalah sebuah fungsi JavaScript yang melakukan validasi formulir.  
-> - Fungsi ini mengambil nilai dari dua input, yaitu "Nama" dan "Email," yang diperoleh melalui ``` document.getElementById() ```
+- ``` validateForm() ``` adalah sebuah fungsi JavaScript yang melakukan validasi formulir.  
+- Fungsi ini mengambil nilai dari dua input, yaitu "Nama" dan "Email," yang diperoleh melalui ``` document.getElementById() ```
 
 ### Validasi nama dan email
-> - Validasi nama dilakukan dengan memeriksa apakah nilai dalam input "Nama" kosong atau tidak. Jika kosong, maka pesan kesalahan akan muncul dan formulir tidak akan dikirim.
-> - Validasi email dilakukan dengan menggunakan ekspresi reguler (regular expression) yang memeriksa apakah alamat email yang dimasukkan sesuai dengan format email yang valid.
+- Validasi nama dilakukan dengan memeriksa apakah nilai dalam input "Nama" kosong atau tidak. Jika kosong, maka pesan kesalahan akan muncul dan formulir tidak akan dikirim.
+- Validasi email dilakukan dengan menggunakan ekspresi reguler (regular expression) yang memeriksa apakah alamat email yang dimasukkan sesuai dengan format email yang valid.
 Jika format email tidak sesuai, pesan kesalahan akan muncul dan formulir tidak akan dikirim.
 
 > Fungsi ``` validateForm() ``` dipanggil pada saat pengguna mencoba mengirimkan formulir (melalui ``` onsubmit="return validateForm()" ``` pada elemen ``` <form> ```). Jika semua validasi berhasil, formulir akan dikirim, tetapi jika ada kesalahan validasi, pengguna akan mendapatkan pesan kesalahan melalui alert() dan formulir tidak akan dikirim.
