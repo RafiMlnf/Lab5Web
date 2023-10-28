@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh Validasi Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <img src="logoupb.png" alt="" class="imgupb" />
+    <h1>Formulir Validasi</h1>
+    <form id="Form1" onsubmit="return validateForm()">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" />
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+      <br /><br />
+
+      <input type="submit" value="Kirim" />
+    </form>
+
+    <script>
+      function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+
+        // Validasi Nama
+        if (name === "") {
+          alert("Nama harus diisi");
+          return false;
+        }
+
+        // Validasi Email
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!email.match(emailPattern)) {
+          alert("Email tidak valid");
+          return false;
+        }
+
+        // Jika semua validasi berhasil, izinkan pengiriman formulir
+        return true;
+      }
+    </script>
+  </body>
+</html>
